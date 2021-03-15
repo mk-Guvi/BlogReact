@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../commonComponents/Header";
 import { ServerUrl } from "../constants/serverUrl";
 import PostSummary from "../commonComponents/PostSummary";
+
 const Home = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
@@ -34,6 +35,7 @@ const Home = () => {
           // </div>
         );
       })}
+     
     </div>
   );
 };
