@@ -20,3 +20,5 @@ Created with CodeSandbox
 9.)In home.js,Using usestate() create a state named posts with empty array as default value.create a  map funtion that returns the posts from rest api of post under p-tag.
 
 10.)In home.js,under useeffect,use setposts to update the state of the post which will update the posts using map function.
+
+11.)create postSumary.js file under commonComponents folder and  create the component named postSummary that prints the title,author,content of each post which is going to be used in map funtion and iport it in home.js as a tag with its attributes (<PostSummary/>).
