@@ -12,3 +12,11 @@ Created with CodeSandbox
 5.)visit the reactstrap and search for navbar section  and copy the neccasry tags from the navbar section and use it  in Header.js.remove the uncontrolled tags and importstatements of it as we dont need it.
 
 6.)change navbarbrand "blogApp" 
+
+7.)create constants folder and create serverURl.js file init.store the serverurl of the api init and import it in home.js
+
+8.)In home.js,Use useeffect to fetch the data from the api(use the serverurl) once.use cors (to avoid cross domain requests) in useffect that can accept api's from other domain. In browser,Go to inspect->Network->header to see the  cors enabled or not (note : * means all access to all domain ,else specific domans will be provided in it. )
+
+9.)In home.js,Using usestate() create a state named posts with empty array as default value.create a  map funtion that returns the posts from rest api of post under p-tag.
+
+10.)In home.js,under useeffect,use setposts to update the state of the post which will update the posts using map function.
