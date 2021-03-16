@@ -64,3 +64,12 @@ Note:
 reason for creating routes file as separate is for easy understanding of paths of routes used.
 
 17.)in app.js create wrap the components of app in switch(top most compoenent and remove the fragment or div tag if used) and use route for each component.
+
+note:
+
+Providers-component share the data to all components by placing it at the top component,unlike the props that shares data to its child component only.
+
+REact-router-dom has a provider named BrowserRouter that has data under BrowserRourter->Router->Router.Provider like
+history of the browser, curent location of the browser,queryparams and all URLmatches of the browser
+
+18.)In index.js,import browserRouterr s Router from react-router-dom and wrap the App component in the Roter component.
