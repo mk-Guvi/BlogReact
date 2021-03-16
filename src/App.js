@@ -2,6 +2,7 @@ import "./styles.css";
 import Header from "./commonComponents/Header";
 import Home from "./pages/Home";
 import AddPost from "../src/pages/AddPost";
+import Post from "../src/pages/Post";
 import Authors from "../src/pages/Authors";
 import { Route, Switch,Link } from "react-router-dom";
 import routes from "../src/routes/routes";
@@ -27,6 +28,9 @@ export default function App() {
       </Route>
       <Route path={routes.newPost}>
         <AddPost />
+      </Route>
+      <Route path={routes.post}>
+        <Post/>
       </Route>
       <Route path={routes.authors}>
         <Authors />

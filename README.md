@@ -72,3 +72,16 @@ reason for creating routes file as separate is for easy understanding of paths o
 20.)remove the header component from home.js and import it in the app.js as we need it for every pages.
 
 21.)in Header.js,Remove the navlink from reactstrap and import navlink from react-router-dom.change the navlink from href to routes path(i.e navlink to ={routes.authors}) for the resppective links .
+
+22.)in postSummary.js.Wrap the title component under link component.change the link component and spcify rputes-path for individual post by adding id(note: replce id-":id") as props and then add the id attribute in postSummary component used in home.js file where u get the individual postID.
+
+23.)create Post.js file under pages and create the post component that returns the title,authorname,content of the post using the useStatehook and import it in app.js as Route with its path.
+
+24.)In post.js file,import useParams from react-router-dom to get the id from react.provider to and fetch the individual post using the id from useparams.create the fetch request in use effect and change the post.author to post.author?.name to avoid app crash that is optional chaining opearator.
+
+NOTE:
+the provider has a prop called match->params that tracks our url
+
+react-router-dom comes with useParams hook that gets the parameters of the url from top provider
+
+learn nullish coalising operator

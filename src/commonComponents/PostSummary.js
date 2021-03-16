@@ -1,8 +1,12 @@
 import React from "react";
-const PostSummary = ({ title, author, content }) => {
+import { Link } from "react-router-dom";
+import routes from "../routes/routes";
+const PostSummary = ({ id,title, author, content }) => {
   return (
     <div>
-      <h3>{title}</h3>
+      <Link to={routes.post.replace(":id",id)}>
+        <h3>{title}</h3>
+      </Link>
       <p>{author}</p>
       <p>{content.substring(0, 100) + "..."}</p>
     </div>

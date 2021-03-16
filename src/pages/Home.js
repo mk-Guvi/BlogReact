@@ -23,6 +23,7 @@ const Home = () => {
       {posts.map((post, postIndex) => {
         return (
           <PostSummary
+          id={post._id}
             key={postIndex}
             title={post.title}
             author={post.author.name}
