@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../commonComponents/Header";
+// import Header from "../commonComponents/Header";
 import { ServerUrl } from "../constants/serverUrl";
 import PostSummary from "../commonComponents/PostSummary";
 
@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
   return (
     <div className="container">
-      <Header />
+      {/* <Header /> */}
       <h1>Home</h1>
       {posts.map((post, postIndex) => {
         return (

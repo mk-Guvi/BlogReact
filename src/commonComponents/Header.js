@@ -3,13 +3,12 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   NavbarText
 } from 'reactstrap';
-
+import routes from "../routes/routes"
+import {NavLink} from "react-router-dom"
 
   
 
@@ -20,15 +19,15 @@ const Header=()=>{
 return(
   <div>
   <Navbar color="light" light expand="md">
-    <NavbarBrand href="/">BlogApp</NavbarBrand>
+    <NavLink to="/">BlogApp</NavLink>
     <NavbarToggler onClick={toggle} />
     <Collapse isOpen={isOpen} navbar>
       <Nav className="me-auto" navbar>
         <NavItem>
-          <NavLink href="/components/">Components</NavLink>
+        <NavLink to={routes.authors} >Authors</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+        <NavLink to={routes.newPost} >AddPost</NavLink>
         </NavItem>
         
       </Nav>

@@ -48,7 +48,7 @@ react router has such provider called as BrowserRouter.as we know client side ro
 
 12.)import {BrowserRouter as Router}(note:broswerRouter is named as Router for cross platform dependency and other things) from react-router-dom in index.js
 
-13.)wrap the app component under the router component as it is the root component.
+13.)In Index.js,wrap the app component under the router component as it is the root component .
 
 Note:
 
@@ -56,20 +56,19 @@ after step 13 ,In components section of inspect tou see that brouwser->Router->R
 
 14.)create author.js and Addpost.js file under pages and import it in app.js as components
 
-15.)create routes foler under src and create route.js file init.In routes.js,create route object based on the api endpoints that contains paths of all routes and export it.
+15.)create routes folder under src and create route.js file init.In routes.js,create route object based on the api endpoints that contains paths of all routes and export it.
 
 16.)import switch and route from react router dom in app.js
 
 Note:
 reason for creating routes file as separate is for easy understanding of paths of routes used.
 
-17.)in app.js create wrap the components of app in switch(top most compoenent and remove the fragment or div tag if used) and use route for each component.
+17.)in app.js wrap the components of app in switch(top most compoenent and remove the fragment or div tag if used) and use route for each component.
 
-note:
+18.)in app.js,wrap switch under fragment and import link from react-router-dom and then create link tag for the respective routes and finallly wrap it with div tag.
 
-Providers-component share the data to all components by placing it at the top component,unlike the props that shares data to its child component only.
+19.)comment the navlink of app.js
 
-REact-router-dom has a provider named BrowserRouter that has data under BrowserRourter->Router->Router.Provider like
-history of the browser, curent location of the browser,queryparams and all URLmatches of the browser
+20.)remove the header component from home.js and import it in the app.js as we need it for every pages.
 
-18.)In index.js,import browserRouterr s Router from react-router-dom and wrap the App component in the Roter component.
+21.)in Header.js,Remove the navlink from reactstrap and import navlink from react-router-dom.change the navlink from href to routes path(i.e navlink to ={routes.authors}) for the resppective links .
