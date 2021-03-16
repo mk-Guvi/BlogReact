@@ -1,1 +1,1 @@
-export const ServerUrl = "https://9y07c.sse.codesandbox.io";
+export const ServerUrl = "https://tranquil-peak-36251.herokuapp.com";
