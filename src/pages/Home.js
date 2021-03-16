@@ -6,6 +6,7 @@ import PostSummary from "../commonComponents/PostSummary";
 const Home = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
+     setLoading(true);
     fetch(ServerUrl + "/posts", {
       mode: "cors"
     })
@@ -13,9 +14,15 @@ const Home = () => {
       .then((data) =>
         //console.log(data)
         setPosts(data.posts)
+
       )
-      .catch(console.error);
+      .catch(console.error)
+      setLoading(false);
   }, []);
+    const [loading, setLoading] = useState(false);
+    if (loading) {
+      return <p>loading</p>
+    }
   return (
     <div className="container">
       {/* <Header /> */}
@@ -29,7 +36,7 @@ const Home = () => {
             author={post.author.name}
             content={post.content}
           />
-          // <div key={postIndex}>
+                 // <div key={postIndex}>
           //   <h3>{post.title}</h3>
           //   <p>{post.author.name}</p>
           //   <p>{post.content.substring(0, 100) + "..."}</p>
