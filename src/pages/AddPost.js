@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input, Spinner } from "reactstrap";
 import { ServerUrl } from "../constants/serverUrl";
 const AddPost = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState(""); //by default authors value is empty so if you not change ans select the author the form will not be submitted to avoid this setAuhtor is called in useeffect hook of authors
   const [content, setcontent] = useState("");
   const [authors, setAuthors] = useState([]);
+  const [isSubmit, setSubmit] = useState(false);
   const onChangeTitle = (event) => setTitle(event.target.value);
   const onChangeAuthor = (event) => setAuthor(event.target.value);
   const onChangeContent = (event) => setcontent(event.target.value);
@@ -17,12 +18,13 @@ const AddPost = () => {
       .then((data) => {
         console.log(data);
         setAuthors(data.author);
-      console.log(data.author[0]._id);
+        console.log(data.author[0]._id);
         setAuthor(data.author[0]._id); //this changes the default value from empty to value of first index of aray.
       })
       .catch(console.error);
   }, []);
   const onFormSubmit = (e) => {
+    setSubmit(true);
     e.preventDefault(); //it prevents reloading the page after submitting form
     const reqBody = {
       title,
@@ -41,7 +43,10 @@ const AddPost = () => {
 
       .then((result) => alert(result))
 
-      .catch(console.error());
+      .catch(console.error())
+      .finally(() => {
+        setSubmit(false);
+      });
   };
   return (
     <div className="container">
@@ -98,9 +103,13 @@ const AddPost = () => {
           />
         </FormGroup>
 
-        <Button className="btn btn-primary" type="submit">
-          Submit
-        </Button>
+        {isSubmit ? (
+          <Spinner color="primary" />
+        ) : (
+          <Button className="btn btn-primary" type="submit">
+            Submit
+          </Button>
+        )}
       </Form>
     </div>
   );
