@@ -93,3 +93,24 @@ learn nullish coalising operator
 //note classname are used from bootsrap as reactstrap uses bootstrap for implementng its react components.And also add activeClassName to navlink to change the active class styles.
 
 NOte:by default navlinks from react-router-dom has active class,to change its value use activeClassName which can be used for navigation.
+
+NOTE:when you move from home->indivdualpost->add-post it will stay in the same page because in switch statement of app.js we use exact props path for home and not for other routes,so this idicates that when partial route matches it will render(eg:post/:id and post/add-new,as we move from post/:id to post/add-new it will stay in the same page it has partial match).This issue can be solved in 2 methods,
+
+1.change the url path in route.js of addpost"/posts/add-new" to "add-new"
+
+2. move the route path of add-new to aboove the post route as we know switch is top down approach(matches from top to down) so it will check add-new routeand then will check the post route.
+
+even if you use exact path ,the post/:id and post/add-new will have the same issue.
+
+27.)In Addpost.js,import the components of forms from reactstrap and create a form using reactstrap with fields,title,authors name,content and submit button.
+
+28.)In Addpost.js,use the usestate hook to sync the form with UI by adding respective attributes to the form fields that is onchange and value attribute to every field.
+
+NOTE:
+FORM Libraries:
+
+final-form.org
+
+react hook form//only used in react
+
+FORMIK and redux form(worst case)
