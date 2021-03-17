@@ -88,4 +88,8 @@ learn nullish coalising operator
 
 25.)In Authors.js,create the Authors component that fetches the authors and display it in the authors route path and use ListGroup from reactsrap to display the authors as lists.
 
+26.)Add classname with its value to navlinks in header.js to align the navbar correctly as we use navlink from react-router-dom.
 
+//note classname are used from bootsrap as reactstrap uses bootstrap for implementng its react components.And also add activeClassName to navlink to change the active class styles.
+
+NOte:by default navlinks from react-router-dom has active class,to change its value use activeClassName which can be used for navigation.
