@@ -113,4 +113,13 @@ final-form.org
 
 react hook form//only used in react
 
-FORMIK and redux form(worst case)
+FORMIK and redux form(worst case
+
+29.)in addpost.js,create a usestate for authors with empty array as default value and create a useeffect hook that fetches the list of authors and use setauthors in useeffect hook to stores the authors list of authors in it.
+
+30.)In addpost.js,in inputfield of authors change input type as select and call the map funtion with options tag that returns the list of authors init.
+
+31.)In Addpost.js,create onFormSubmit function wth fetch request with alert messages by calling posts api to store the data that filled in the form by calling the onformsubmit function in the Form tag.add headers with content type in fetch request of onFormSubmit otherwise the server will not understand that the data sent is in json format,that why the header content type is used
+
+
+31.)In useeffect hook of addpost.js,add setAuthor(data.author._id) so that empty string of author changes to the value which is selected in the select field.
