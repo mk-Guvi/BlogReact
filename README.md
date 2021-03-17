@@ -125,3 +125,26 @@ FORMIK and redux form(worst case
 31.)In useeffect hook of addpost.js,add setAuthor(data.author._id) so that empty string of author changes to the value which is selected in the select field.
 
 32.)import spinner from reactstrap in addpost.js and use it to disable submit button onec it has been cliked to avoid submiting same post multiple time by creating usestate  for it(issubmit).
+
+NoTE:
+
+context is the way creating the PROViDERS and providers are the result after using context
+
+STATE MANAGEMENTS libraries:
+
+these tools is used to store states in one place share it to mulitple components.
+
+REDUX.js.org
+
+recoil
+
+mobx
+
+when redux was launched react also intoduced,
+
+providers
+context
+usecontext
+usereducers
+
+these stopped using the external libraries for state managements.
