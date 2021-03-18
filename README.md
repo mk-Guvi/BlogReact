@@ -153,3 +153,5 @@ these stopped using the external libraries for state managements.
 
 
 34.)create Providers folder under src and create ThemeProvider folder under Providers and then reate ThemeProvider.js file init.create the themeProvider component using the Providers concept in themProviedr.js file
+
+35.)in index.js,wrap the components under Themeprovider component and in app.js create a button named using the usecontext hook and then onclick attribute to change its value.

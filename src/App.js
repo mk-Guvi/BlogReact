@@ -4,13 +4,17 @@ import Home from "./pages/Home";
 import AddPost from "../src/pages/AddPost";
 import Post from "../src/pages/Post";
 import Authors from "../src/pages/Authors";
-import { Route, Switch,Link } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import routes from "../src/routes/routes";
+import { useContext } from "react";
+import {ThemeContext} from "./providers/ThemeProvider/ThemeProvider";
+import { Button } from "reactstrap";
 
 export default function App() {
+  const theme = useContext(ThemeContext);
   return (
     <>
-     {/* <ul>
+      {/* <ul>
             <li>
               <Link to={routes.home}>Home</Link>
             </li>
@@ -21,21 +25,22 @@ export default function App() {
               <Link to={routes.newPost}>Add POSTS</Link>
             </li>
           </ul> */}
-          <Header />
-    <Switch>
+      <Header />
+      <Button className="but"onClick={theme.toggle}>{theme.mode}</Button>
+      <Switch>
         <Route exact path={routes.home}>
-        <Home/>
-      </Route>
-      <Route path={routes.newPost}>
-        <AddPost />
-      </Route>
-      <Route path={routes.post}>
-        <Post/>
-      </Route>
-      <Route path={routes.authors}>
-        <Authors />
-      </Route>
-    </Switch>
+          <Home />
+        </Route>
+        <Route path={routes.newPost}>
+          <AddPost />
+        </Route>
+        <Route path={routes.post}>
+          <Post />
+        </Route>
+        <Route path={routes.authors}>
+          <Authors />
+        </Route>
+      </Switch>
     </>
   );
 }
