@@ -152,3 +152,4 @@ these stopped using the external libraries for state managements.
 33.)in home.js,create a readmore button using reactstrap and call a funtion(readMore) in onclick attribute.In Readmemore function use the history.push method using usehistory hook of react-router-dom to redirect the page to posts.indivial id.
 
 
+34.)create Providers folder under src and create ThemeProvider folder under Providers and then reate ThemeProvider.js file init.create the themeProvider component using the Providers concept in themProviedr.js file
