@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../src/styles.css";
 import Header from "./commonComponents/Header";
 import Home from "./pages/Home";
 import AddPost from "../src/pages/AddPost";
@@ -6,12 +6,16 @@ import Post from "../src/pages/Post";
 import Authors from "../src/pages/Authors";
 import { Route, Switch, Link } from "react-router-dom";
 import routes from "../src/routes/routes";
-import { useContext } from "react";
-import {ThemeContext} from "./providers/ThemeProvider/ThemeProvider";
+import Red from "./providers/ThemeProvider/Reducer"
+// import { useContext } from "react";
+// import { ThemeContext } from "./providers/ThemeProvider/ThemeProvider";
 import { Button } from "reactstrap";
+import useTheme from "./providers/ThemeProvider/useTheme";
 
 export default function App() {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
+  // const theme = useContext(ThemeContext);//comenting as we use our custom hook
+
   return (
     <>
       {/* <ul>
@@ -26,7 +30,10 @@ export default function App() {
             </li>
           </ul> */}
       <Header />
-      <Button className="but"onClick={theme.toggle}>{theme.mode}</Button>
+      {/* <Red /> */}
+      <Button className="but" onClick={theme.toggle}>
+        {theme.mode}
+      </Button>
       <Switch>
         <Route exact path={routes.home}>
           <Home />

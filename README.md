@@ -163,4 +163,6 @@ Gatsby creates dynamic pages at built time that means if you have 3 links it wil
 
 Lazy loading means if your component doesnt rendered on the screen it wont load that component so that browser loads fast.
 
-36.)create usetheme.js file  in THemeProvider folder and create a useTHeme hook init that can access the Theme Provider directly instead of calling the usecontext hook.
+36.)create usetheme.js file in THemeProvider folder and create a useTHeme hook init that can access the Theme Provider directly instead of calling the usecontext hook.
+
+37.)create counter buttons using useReducers in Reducer.js file and import in app.js as component to see the work of usereducer hook.

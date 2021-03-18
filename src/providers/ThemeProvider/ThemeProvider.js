@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-
+//this theme is used  only during server side rendering.
 const theme = "light";
 //themeContext is a Data structure that is used by react for storing internal data for the providers.
 //create Context is available intenally in React and the default value of context is theme which is "light".
