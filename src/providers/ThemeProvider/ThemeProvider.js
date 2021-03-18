@@ -12,12 +12,12 @@ const { Provider } = ThemeContext;
 //provider components have one props by default called childern(anything inside two tags is called children prop)
 const ThemeProvider = ({ children }) => {
   const [mode, setMode] = useState("light");
-  const toggleMode = () => {
+  const toggle = () => {
     setMode(mode === "light" ? "dark" : "light");
   };
   return (
     // This value indicates the value you see in react.provider inspect section.since it is a provider whenever the change occurs in the toggle it will affect the entire components.
-    <Provider value={{ mode, toggleMode }}>{children}</Provider>
+    <Provider value={{ mode, toggle }}>{children}</Provider>
   );
 };
 
