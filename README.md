@@ -129,7 +129,7 @@ NoTE:
 
 context is the way creating the PROViDERS and providers are the result after using context
 
-STATE MANAGEMENTS libraries:
+STATE MANAGEMENTS Tools
 
 these tools is used to store states in one place share it to mulitple components.
 
@@ -166,3 +166,20 @@ Lazy loading means if your component doesnt rendered on the screen it wont load 
 36.)create usetheme.js file in THemeProvider folder and create a useTHeme hook init that can access the Theme Provider directly instead of calling the usecontext hook.
 
 37.)create counter buttons using useReducers in Reducer.js file and import in app.js as component to see the work of usereducer hook.
+
+NOTES:
+
+## STATE MANAGEMENT
+
+Local Component State- >useState
+Glocal State- >Providers
+
+USe of GLobal State:
+-They can be shared betwee n multiple components
+-they reduce the number of network request made
+-they will improve the app performance by reducing data manged by App(that is reducing the local variables)
+
+Providers + Context -> very basic global states
+They do not have any performance optimization
+
+to achieve performace optimization we use state managent tools like redux,recoil,mobx
