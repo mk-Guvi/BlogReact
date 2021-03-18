@@ -121,10 +121,9 @@ FORMIK and redux form(worst case
 
 31.)In Addpost.js,create onFormSubmit function wth fetch request with alert messages by calling posts api to store the data that filled in the form by calling the onformsubmit function in the Form tag.add headers with content type in fetch request of onFormSubmit otherwise the server will not understand that the data sent is in json format,that why the header content type is used
 
+31.)In useeffect hook of addpost.js,add setAuthor(data.author.\_id) so that empty string of author changes to the value which is selected in the select field.
 
-31.)In useeffect hook of addpost.js,add setAuthor(data.author._id) so that empty string of author changes to the value which is selected in the select field.
-
-32.)import spinner from reactstrap in addpost.js and use it to disable submit button onec it has been cliked to avoid submiting same post multiple time by creating usestate  for it(issubmit).
+32.)import spinner from reactstrap in addpost.js and use it to disable submit button onec it has been cliked to avoid submiting same post multiple time by creating usestate for it(issubmit).
 
 NoTE:
 
@@ -151,7 +150,17 @@ these stopped using the external libraries for state managements.
 
 33.)in home.js,create a readmore button using reactstrap and call a funtion(readMore) in onclick attribute.In Readmemore function use the history.push method using usehistory hook of react-router-dom to redirect the page to posts.indivial id.
 
-
 34.)create Providers folder under src and create ThemeProvider folder under Providers and then reate ThemeProvider.js file init.create the themeProvider component using the Providers concept in themProviedr.js file
 
 35.)in index.js,wrap the components under Themeprovider component and in app.js create a button named using the usecontext hook and then onclick attribute to change its value.
+
+NOTE:
+ssr means rendering react on server and send results as html and css so that clients can access the data at high speed.
+
+SSR adds certain styles/meta-data to the page before the react renders
+
+Gatsby creates dynamic pages at built time that means if you have 3 links it will create three html files which speeds the loading faster
+
+Lazy loading means if your component doesnt rendered on the screen it wont load that component so that browser loads fast.
+
+36.)create usetheme.js file  in THemeProvider folder and create a useTHeme hook init that can access the Theme Provider directly instead of calling the usecontext hook.
